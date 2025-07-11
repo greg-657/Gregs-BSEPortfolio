@@ -1,5 +1,5 @@
 b# Music Game/Frequency Reader
-This project is a game/device that can do a multitude of things. Firstly, it can read the frequency of a note. Not only that, but it can also take said frequency and match it to a note. Secondly, it can string together
+This project is a game/device that can do a multitude of things. Firstly, it can read the frequency of a note. Not only that, but it can also take said frequency and match it to a note. Secondly, it can determine whether a note played by someone is correct, comparing it with a given note. This is displayed on a small LCD screen
 
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
@@ -54,6 +54,12 @@ For your first milestone, describe what your project is and how you plan to buil
 - What your plan is to complete your project
 
 
+#The Sources I Used
+this project wouldn't be possible without the help of talented individuals both in this class and on the internet. Here are the majority of the sources I used
+-[this instructables article](https://www.instructables.com/Arduino-Audio-Input/)
+note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) article, linked on the page
+-[the Arduino Documentation](https://docs.arduino.cc/)
+-[this was my starter project, and it provided a suitable base for me to begin working](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)
 
 
 
