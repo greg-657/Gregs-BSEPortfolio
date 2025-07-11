@@ -82,9 +82,9 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Devmo KY-037 Sound Sensor | Taking in the sample frequency signal and sending it to the board via an analog signal| $Price | <a href=> Link </a> |
-| Arduino UNO | Interpreting the analog signal and running the frequency-detection code| $Price | <a href=https://store.arduino.cc/products/arduino-uno-rev3?srsltid=AfmBOorFwKuA__3b3qdGO5jjyIvdtzefFv_RX1xw9pUQX-7gYCD9sQtd> Link </a> |
-| 16x2 LCD display with I²C interface | What the item is used for | $Price | <a href=https://store-usa.arduino.cc/collections/displays/products/16x2-lcd-display-with-i-c-interface> Link </a> |
+| Devmo KY-037 Sound Sensor | Taking in the sample frequency signal and sending it to the board via an analog signal| $Price | <a href=https://www.amazon.com/DEVMO-Microphone-Sensitivity-Detection-Compatible > Link </a> |
+| Arduino UNO | Interpreting the analog signal and running the frequency-detection code| $Price | <a href=https://store-usa.arduino.cc/products/arduino-uno-rev3> Link </a> |
+| 16x2 LCD display with I²C interface | display  | $Price | <a href=https://store-usa.arduino.cc/collections/displays/products/16x2-lcd-display-with-i-c-interface> Link </a> |
 ```
 # Other Resources/Examples
 One of the best parts about GitHub is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
