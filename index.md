@@ -60,12 +60,14 @@ For your first milestone, describe what your project is and how you plan to buil
 
 
 
-#The Sources I Used
+# The Sources I Used
 this project wouldn't be possible without the help of talented individuals both in this class and on the internet. Here are the majority of the sources I used
 
 -[this instructables article](https://www.instructables.com/Arduino-Audio-Input/)
 note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) article, linked on the page
+
 -[the Arduino Documentation](https://docs.arduino.cc/)
+
 -[this was my starter project, and it provided a suitable base for me to begin working](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)
 
 
