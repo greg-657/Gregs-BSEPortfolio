@@ -54,8 +54,15 @@ For your first milestone, describe what your project is and how you plan to buil
 - What your plan is to complete your project
 
 
+
+
+
+
+
+
 #The Sources I Used
 this project wouldn't be possible without the help of talented individuals both in this class and on the internet. Here are the majority of the sources I used
+
 -[this instructables article](https://www.instructables.com/Arduino-Audio-Input/)
 note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) article, linked on the page
 -[the Arduino Documentation](https://docs.arduino.cc/)
