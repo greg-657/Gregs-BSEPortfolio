@@ -68,7 +68,7 @@ note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) art
 
 -[the Arduino Documentation](https://docs.arduino.cc/)
 
--[this was my starter project, and it provided a suitable base for me to begin working](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)
+-[this was my starter project, and it provided a suitable base for me to work on my project and specialize it for this purpose](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)
 
 
 
