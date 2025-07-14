@@ -119,8 +119,8 @@ void loop(){
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
-| **Part** | **Note** | **Price** | **Link** |
-|:--:|:--:|:--:|:--:|
+
+
 | Devmo KY-037 Sound Sensor | Taking in the sample frequency signal and sending it to the board via an analog signal| $Price | <a href=https://www.amazon.com/DEVMO-Microphone-Sensitivity-Detection-Compatible/dp/B07S4DTKYH > Link </a> |
 | Arduino UNO | Interpreting the analog signal and running the frequency-detection code| $Price | <a href=https://store-usa.arduino.cc/products/arduino-uno-rev3> Link </a> |
 | 16x2 LCD display with I²C interface | Displaying notes and frequencies | $Price | <a href=https://store-usa.arduino.cc/collections/displays/products/16x2-lcd-display-with-i-c-interface> Link </a> |
