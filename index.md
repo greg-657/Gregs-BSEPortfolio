@@ -68,7 +68,10 @@ note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) art
 
 
 # Schematics 
-![credit for this Fritzing diagram goes to Clyde Lettsome, from [his site](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)](Fritzing-Musical-Note-Detector.png)
+![](Fritzing-Musical-Note-Detector.png)
+
+
+credit for this Fritzing diagram goes to Clyde Lettsome, from [his site](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)
 
 # Code
 
