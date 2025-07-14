@@ -1,5 +1,5 @@
 b# Music Game/Frequency Reader
-This project is a game/device that can do a multitude of things. Firstly, it can read the frequency of a note. Not only that, but it can also take said frequency and match it to a note. Secondly, it can determine whether a note played by someone is correct, comparing it with a given note. This is displayed on a small LCD screen
+This project is a game/device that can do a multitude of things. Firstly, it can read the frequency of a note. Not only that, but it can also take said frequency and match it to a note. Secondly, it can determine whether a note played by someone is correct, comparing it with another note. This is displayed on a small LCD screen that will show both the note and whether it was correct. I chose this project because it seemed suitably challenging for my level and also combined my 2 interests of computer science and music. 
 
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
@@ -76,7 +76,7 @@ note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) art
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resources to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+
 
 ```c++
 int incomingAudio;
@@ -141,4 +141,4 @@ To watch the BSE tutorial on how to create a portfolio, click here.
 ```
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6ioimKLn2jI?si=vSGMq1GlVQYV36qd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Th
+This video is showcasing my starter project. It is comprised of 3 sliders, with each of them controlling how much of a certain color there is. One controls red, one blue, and one green. Each one is connected to an LED of that corresponding color, and depending on how high you push the slider, the light will output at that strength. This can be used to create some color combinations. Sliding up both the red and blue creates magenta, the blue and green create cyan, and the green and red create yellow. Sliding all the sliders creates white. I chose this project because it seemed fun and didn't seem too easy or too challenging. I faced 2 main challenges while doing this project. First, I was using too much solder on each of the joints. However, by using some tips and advice from my instructors, I was able to start using an accurate amount of solder. The second challenge was when I tested it the first time, the light wouldn't work. After talking with my instructors, I learned it was because some of the joints weren't soldered, and they all needed to be soldered. These challenges helped me improve my soldering skills as I overcame them.
