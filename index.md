@@ -116,11 +116,11 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 
 
-| Devmo KY-037 Sound Sensor | Taking in the sample frequency signal and sending it to the board via an analog signal| $Price | <a href=https://www.amazon.com/DEVMO-Microphone-Sensitivity-Detection-Compatible/dp/B07S4DTKYH > Link </a> |
+| Devmo KY-037 Sound Sensor | Taking in the sample frequency signal and sending it to the board via an analog signal| $4.66 for one | <a href=https://www.amazon.com/DEVMO-Microphone-Sensitivity-Detection-Compatible/dp/B07S4DTKYH> Link </a> |
 
-| Arduino UNO | Interpreting the analog signal and running the frequency-detection code| $Price | <a href=https://store-usa.arduino.cc/products/arduino-uno-rev3> Link </a> |
+| Arduino UNO | Interpreting the analog signal and running the frequency-detection code| $27.60 | <a href=https://store-usa.arduino.cc/products/arduino-uno-rev3> Link </a> |
 
-| 16x2 LCD display with I²C interface | Displaying notes and frequencies | $Price | <a href=https://store-usa.arduino.cc/collections/displays/products/16x2-lcd-display-with-i-c-interface> Link </a> |
+| 16x2 LCD display with I²C interface | Displaying notes and frequencies | $7.00 | <a href=https://store-usa.arduino.cc/collections/displays/products/16x2-lcd-display-with-i-c-interface> Link </a> |
 
 | Jumper Wires | Connecting all the components together |
 
