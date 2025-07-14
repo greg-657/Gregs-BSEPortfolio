@@ -79,15 +79,39 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
-void setup() {
-  // put your setup code here, to run once:
+int incomingAudio;
+
+void setup(){
   Serial.begin(9600);
-  Serial.println("Hello World!");
+  cli();//disable interrupts
+  
+  //set up continuous sampling of analog pin 0
+  
+  //clear ADCSRA and ADCSRB registers
+  ADCSRA = 0;
+  ADCSRB = 0;
+  
+  ADMUX |= (1 << REFS0); //set reference voltage
+  ADMUX |= (1 << ADLAR); //left align the ADC value- so we can read highest 8 bits from ADCH register only
+  
+  ADCSRA |= (1 << ADPS2) | (1 << ADPS0); //set ADC clock with 32 prescaler- 16mHz/32=500kHz
+  ADCSRA |= (1 << ADATE); //enabble auto trigger
+  ADCSRA |= (1 << ADIE); //enable interrupts when measurement complete
+  ADCSRA |= (1 << ADEN); //enable ADC
+  ADCSRA |= (1 << ADSC); //start ADC measurements
+  
+  sei();//enable interrupts
+
+  //if you want to add other things to setup(), do it here
+
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+ISR(ADC_vect) {//when new ADC value ready
+  incomingAudio = ADCH;//update the variable incomingAudio with new value from A0 (between 0 and 255)
+}
 
+void loop(){
+  Serial.println(incomingAudio);
 }
 ```
 
@@ -99,7 +123,9 @@ Don't forget to place the link of where to buy each component inside the quotati
 |:--:|:--:|:--:|:--:|
 | Devmo KY-037 Sound Sensor | Taking in the sample frequency signal and sending it to the board via an analog signal| $Price | <a href=https://www.amazon.com/DEVMO-Microphone-Sensitivity-Detection-Compatible/dp/B07S4DTKYH > Link </a> |
 | Arduino UNO | Interpreting the analog signal and running the frequency-detection code| $Price | <a href=https://store-usa.arduino.cc/products/arduino-uno-rev3> Link </a> |
-| 16x2 LCD display with I²C interface | display  | $Price | <a href=https://store-usa.arduino.cc/collections/displays/products/16x2-lcd-display-with-i-c-interface> Link </a> |
+| 16x2 LCD display with I²C interface | Displaying notes and frequencies | $Price | <a href=https://store-usa.arduino.cc/collections/displays/products/16x2-lcd-display-with-i-c-interface> Link </a> |
+| Jumper Wires | Connecting all the components together |
+| Breadboard | Having a space to connect all the wires 
 ```
 # Other Resources/Examples
 One of the best parts about GitHub is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
@@ -110,3 +136,5 @@ One of the best parts about GitHub is that you can view how other people set up 
 To watch the BSE tutorial on how to create a portfolio, click here.
 ```
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6ioimKLn2jI?si=vSGMq1GlVQYV36qd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Th
