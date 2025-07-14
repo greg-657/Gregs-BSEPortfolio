@@ -1,4 +1,4 @@
-b# Music Game/Frequency Reader
+# Music Game/Frequency Reader
 This project is a game/device that can do a multitude of things. Firstly, it can read the frequency of a note. Not only that, but it can also take said frequency and match it to a note. Secondly, it can determine whether a note played by someone is correct, comparing it with another note. This is displayed on a small LCD screen that will show both the note and whether it was correct. I chose this project because it seemed suitably challenging for my level and also combined my 2 interests of computer science and music. 
 
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
