@@ -68,7 +68,6 @@ note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) art
 
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resources to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
 ![credit for this Fritzing diagram goes to Clyde Lettsome, from [his site](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)](Fritzing-Musical-Note-Detector.png)
 
 # Code
