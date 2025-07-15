@@ -42,7 +42,7 @@ For your second milestone, explain what you've worked on since your previous mil
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A0bFmoxoMo8?si=LV5PQAj5vhVgiuPV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-This is my first milestone. To get a good jumping-off point for my project, I decided to make a frequency reader, as that didn't seem too complicated. Hardware-wise, my project at this stage only had a sound sensor to read an audio input, an Arduino UNO microcontroller board to interpret that input, jumper wires, and a breadboard. Currently, I can read the frequency of trombone notes. My plan for the whole project is to make it so that the hardware can read a frequency and associate it with a note. Some challenges I am facing as of the completion of my first milestone are making a frequency system not limited to the b-flat scale
+This is my first milestone. To get a good jumping-off point for my project, I decided to make a frequency reader, as that didn't seem too complicated. Hardware-wise, my project at this stage only had a sound sensor to read an audio input, an Arduino UNO microcontroller board to interpret that input, jumper wires, and a breadboard. Currently, I can read the frequency of trombone notes. My plan for the whole project is to make it so that the hardware can read a frequency and associate it with a note. Some challenges I am facing as of the completion of my first milestone are making a frequency system not limited to the b-flat scale, and not being able to work with an actual trombone as it is too cumbersome, so I have to use .
 
 
 For your first milestone, describe what your project is and how you plan to build it. You can include:
@@ -67,6 +67,7 @@ note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) art
 -[the Arduino Documentation](https://docs.arduino.cc/)
 
 -[this was the project I decided to start from, and it provided a suitable base for me to work on my project and specialize it for the purposes I wanted](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)
+
 
 
 
@@ -226,7 +227,7 @@ void loop(){
 
 # Bill of Materials
 
-| Devmo KY-037 Sound Sensor | Taking in the sample frequency signal and sending it to the board via an analog signal| $4.66 for one | <a href=https://www.amazon.com/DEVMO-Microphone-Sensitivity-Detection-Compatible/dp/B07S4DTKYH> Link </a> |
+| Devmo KY-037 Sound Sensor | Taking in the sample frequency signal and sending it to the board via an analog signal| $4.66 for one | [Link](https://www.amazon.com/DEVMO-Microphone-Sensitivity-Detection-Compatible/dp/B07S4DTKYH) |
 
 | Arduino UNO | Interpreting the analog signal and running the frequency-detection code| $27.60 | <a href=https://store-usa.arduino.cc/products/arduino-uno-rev3> Link </a> |
 
