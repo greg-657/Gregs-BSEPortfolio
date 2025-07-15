@@ -1,5 +1,5 @@
 # Music Game/Frequency Reader
-This project is a game/device that can do a multitude of things. Firstly, it can read the frequency of a note. Not only that, but it can also take said frequency and match it to a note. Secondly, it can determine whether a note played by someone is correct, comparing it with another note. This is displayed on a small LCD screen that will show both the note and whether it was correct. I chose this project because it seemed suitably challenging for my level and also combined my 2 interests of computer science and music. 
+This project is a game/device that can do a multitude of things. Firstly, it can read the frequency of a note. Not only that, but it can also take said frequency and match it to a note. Secondly, it can determine whether a note played by someone is correct, comparing it with another note. This is displayed on a small LCD screen that will show both the note and whether it was correct. I chose this project because it seemed suitably challenging for my level and also combined 3 of my interests: computer science, video games, and music. 
 
 
 
@@ -40,13 +40,16 @@ For your second milestone, explain what you've worked on since your previous mil
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A0bFmoxoMo8?si=LV5PQAj5vhVgiuPV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This is my first milestone. To get a good jumping-off point for my project, I decided to make a frequency reader, as that didn't seem too complicated. Hardware-wise, my project at this stage only had a sound sensor to read an audio input, an Arduino UNO microcontroller board to interpret that input, jumper wires, and a breadboard. Currently, I can read the frequency of trombone notes. My plan for the whole project is to make it so that the hardware can read a frequency and associate it with a note. Some challenges I am facing as of the completion of my first milestone are making a frequency system not limited to the b-flat scale
+
 
 For your first milestone, describe what your project is and how you plan to build it. You can include:
 - An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
+- The technical progress you've made so far
 - Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+- What is your plan to complete your project
 
 
 
@@ -56,14 +59,14 @@ For your first milestone, describe what your project is and how you plan to buil
 
 
 # The Sources I Used
-this project wouldn't be possible without the help of talented individuals both in this class and on the internet. Here are the majority of the sources I used
+This project wouldn't be possible without the help of talented individuals, both in this class and on the internet. Here are the majority of the sources I used
 
 -[this instructables article](https://www.instructables.com/Arduino-Audio-Input/)
 note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) article, linked on the page
 
 -[the Arduino Documentation](https://docs.arduino.cc/)
 
--[this was my starter project, and it provided a suitable base for me to work on my project and specialize it for this purpose](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)
+-[this was the project I decided to start from, and it provided a suitable base for me to work on my project and specialize it for the purposes I wanted](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)
 
 
 
