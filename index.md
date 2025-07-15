@@ -235,6 +235,7 @@ void loop(){
 | Jumper Wires | Connecting all the components together |
 
 | Breadboard | Having a space to connect all the wires |
+
 ```
 # Other Resources/Examples
 One of the best parts about GitHub is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
