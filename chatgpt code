@@ -1,0 +1,182 @@
+if ((frequency >= 78) && (frequency <= 86)) {
+  Serial.print("E ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 83) && (frequency <= 91)) {
+  Serial.print("F ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 88) && (frequency <= 96)) {
+  Serial.print("F# / Gb ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 94) && (frequency <= 102)) {
+  Serial.print("G ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 100) && (frequency <= 108)) {
+  Serial.print("G# / Ab ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 106) && (frequency <= 114)) {
+  Serial.print("A ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 112) && (frequency <= 120)) {
+  Serial.print("Bb ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 119) && (frequency <= 127)) {
+  Serial.print("B ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 127) && (frequency <= 135)) {
+  Serial.print("C ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 134) && (frequency <= 142)) {
+  Serial.print("C# / Db ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 143) && (frequency <= 151)) {
+  Serial.print("D ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 151) && (frequency <= 159)) {
+  Serial.print("Eb ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 158) && (frequency <= 166)) {
+  Serial.print("E ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 165) && (frequency <= 173)) {
+  Serial.print("F ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 181) && (frequency <= 189)) {
+  Serial.print("F# / Gb ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 192) && (frequency <= 200)) {
+  Serial.print("G ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 204) && (frequency <= 212)) {
+  Serial.print("G# / Ab ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 216) && (frequency <= 224)) {
+  Serial.print("A ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 229) && (frequency <= 237)) {
+  Serial.print("Bb (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 243) && (frequency <= 251)) {
+  Serial.print("B ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 257) && (frequency <= 265)) {
+  Serial.print("C ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 273) && (frequency <= 281)) {
+  Serial.print("C# / Db ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 289) && (frequency <= 297)) {
+  Serial.print("D ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 307) && (frequency <= 315)) {
+  Serial.print("Eb ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 325) && (frequency <= 333)) {
+  Serial.print("E ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 345) && (frequency <= 353)) {
+  Serial.print("F ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 366) && (frequency <= 374)) {
+  Serial.print("F# / Gb ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 388) && (frequency <= 396)) {
+  Serial.print("G ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 411) && (frequency <= 419)) {
+  Serial.print("G# / Ab ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 436) && (frequency <= 444)) {
+  Serial.print("A ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 462) && (frequency <= 470)) {
+  Serial.print("Bb ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 490) && (frequency <= 498)) {
+  Serial.print("B ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 519) && (frequency <= 527)) {
+  Serial.print("C ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 550) && (frequency <= 558)) {
+  Serial.print("C# / Db ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 583) && (frequency <= 591)) {
+  Serial.print("D ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+} else if ((frequency >= 618) && (frequency <= 626)) {
+  Serial.print("Eb ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(500);
+}
+//chatgpt frequency
