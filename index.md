@@ -81,8 +81,23 @@ credit for this Fritzing diagram goes to Clyde Lettsome, from [his site](https:/
 
 
 ```c++
-boolean clipping = 0;
 
+//generalized wave freq detection with 38.5kHz sampling rate and interrupts
+//by Amanda Ghassaei
+//https://www.instructables.com/id/Arduino-Frequency-Detection/
+//Sept 2012
+
+/*
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+*/
+
+int noteLoc;
+boolean clipping = 0;
+//it starts with one thing I don't know why it doesnt even matter how hard you try keep that in mind i designed this rhyme to explain in due time all I know time is a valuble thing watch it fly by as the pendulum swings watch it count down to the end of the day the clock ticks like the way its so unreal didn't look out 
 //data storage variables
 byte newData = 0;
 byte prevData = 0;
@@ -205,43 +220,209 @@ void checkClipping(){//manage clipping indicator LED
 
 
 void loop(){
-  
-  //checkClipping();
-  
   frequency = 38462/float(period);//calculate frequency timer rate/period
-  
-  //print results
-  if((frequency>=107)||(frequency<=123));{}
-    Serial.println("Bb");
+  if((frequency >= 76) && (frequency <= 80)){
+  Serial.print("E ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 81) && (frequency <= 85)){
+  Serial.print("F ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 86) && (frequency <= 91)){
+  Serial.print("F# ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 92) && (frequency <= 97)){
+  Serial.print("G ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 98) && (frequency <= 103)){
+  Serial.print("Ab ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 104) && (frequency <= 109)){
+  Serial.print("A ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 110) && (frequency <= 123)){
+  Serial.print("Bb ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 124) && (frequency <= 139)){
+  Serial.print("C ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 140) && (frequency <= 151)){
+  Serial.print("D ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 152) && (frequency <= 160)){
+  Serial.print("Eb ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 161) && (frequency <= 167)){
+  Serial.print("E ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 168) && (frequency <= 175)){
+  Serial.print("F ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 176) && (frequency <= 183)){
+  Serial.print("F# ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 184) && (frequency <= 190)){
+  Serial.print("G ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 191) && (frequency <= 200)){
+  Serial.print("Ab ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 201) && (frequency <= 213)){
+  Serial.print("A ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 214) && (frequency <= 226)){
+  Serial.print("A (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 227) && (frequency <= 239)){
+  Serial.print("Bb (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 240) && (frequency <= 245)){
+  Serial.print("B ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 246) && (frequency <= 255)){
+  Serial.print("B (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 256) && (frequency <= 270)){
+  Serial.print("C (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 271) && (frequency <= 286)){
+  Serial.print("C# (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 287) && (frequency <= 304)){
+  Serial.print("D (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 305) && (frequency <= 322)){
+  Serial.print("Eb (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 323) && (frequency <= 342)){
+  Serial.print("E (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 343) && (frequency <= 363)){
+  Serial.print("F (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 364) && (frequency <= 385)){
+  Serial.print("F# (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 386) && (frequency <= 408)){
+  Serial.print("G (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 409) && (frequency <= 433)){
+  Serial.print("Ab (high) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 434) && (frequency <= 459)){
+  Serial.print("A (high 2) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 460) && (frequency <= 487)){
+  Serial.print("Bb (high 2) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 488) && (frequency <= 516)){
+  Serial.print("B (high 2) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 517) && (frequency <= 547)){
+  Serial.print("C (high 2) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 548) && (frequency <= 580)){
+  Serial.print("C# (high 2) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 581) && (frequency <= 615)){
+  Serial.print("D (high 2) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else if((frequency >= 616) && (frequency <= 622)){
+  Serial.print("Eb (high 2) ");
+  Serial.print(frequency);
+  Serial.println("Hz");
+  delay(1000);
+  }else{
+  Serial.print("out of range ");
+  Serial.print(frequency);
+  Serial.println(" Hz");
+  delay(1000);
   }
-  if((frequency>=124)||(frequency<=137));{}
-    Serial.println("Bb");
-  }
-  // Serial.println(frequency);
-  //delay(100);//feel free to remove this if you want
-  
-  //do other stuff here
 }
-
 ```
 
 # Bill of Materials
 
 | Devmo KY-037 Sound Sensor | Taking in the sample frequency signal and sending it to the board via an analog signal| $4.66 for one | [Link](https://www.amazon.com/DEVMO-Microphone-Sensitivity-Detection-Compatible/dp/B07S4DTKYH) |
-
-------------------------------------------------------------------------------------------------------------------------------------------
+__________________________________________________________________________________________________________________________________________
 
 | Arduino UNO | Interpreting the analog signal and running the frequency-detection code| $27.60 | [Link](https://store-usa.arduino.cc/products/arduino-uno-rev3) |
-
-------------------------------------------------------------------------------------------------------------------------------------------
+__________________________________________________________________________________________________________________________________________
 
 | 16x2 LCD display with I²C interface | Displaying notes and frequencies | $7.00 | [Link](https://store-usa.arduino.cc/collections/displays/products/16x2-lcd-display-with-i-c-interface) |
-
-------------------------------------------------------------------------------------------------------------------------------------------
+__________________________________________________________________________________________________________________________________________
 
 | Jumper Wires | Connecting all the components together |
-
-------------------------------------------------------------------------------------------------------------------------------------------
+__________________________________________________________________________________________________________________________________________
 
 | Breadboard | Having a space to connect all the wires |
 
