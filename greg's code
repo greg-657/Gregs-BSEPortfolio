@@ -128,15 +128,51 @@ void loop(){
   frequency = 38462/float(period);//calculate frequency timer rate/period
   
   //print results
-  if((frequency>=107)||(frequency<=123));{}
-    Serial.println("Bb");
+    if((frequency>=110)&&(frequency<=122)){
+    Serial.print("Bb ");
+    Serial.print(frequency);
+    Serial.println("Hz");
+    delay(500);
+  }else if((frequency>=124)&&(frequency<=136)){
+    Serial.print("C ");
+    Serial.print(frequency);
+    Serial.println("Hz");
+    delay(500);
+  }else if((frequency>=140)&&(frequency<=152)){
+    Serial.print("D ");
+    Serial.print(frequency);
+    Serial.println("Hz");
+    delay(500);
+  }else if((frequency>152)&&(frequency<=161)){
+    Serial.print("Eb ");
+    Serial.print(frequency);
+    Serial.println("Hz");
+    delay(500);
+  }else if((frequency>=168)&&(frequency<=190)){
+    Serial.print("F ");
+    Serial.print(frequency);
+    Serial.println("Hz");
+    delay(500);
+  }else if((frequency>=191)&&(frequency<=201)){
+    Serial.print("G ");
+    Serial.print(frequency);
+    Serial.println("Hz");
+    delay(500);
+  }else if((frequency>=214)&&(frequency<=226)){
+    Serial.print("A ");
+    Serial.print(frequency);
+    Serial.println("Hz");
+    delay(500);
+  }else if((frequency>=227)&&(frequency<=239)){
+    Serial.print("Bb (high) ");
+    Serial.print(frequency);
+    Serial.println("Hz");
+    delay(500);
+  }else{
+    Serial.print("out of range ");
+    Serial.println(frequency);
+
+    delay(500);
   }
-  if((frequency>=124)||(frequency<=137));{}
-    Serial.println("Bb");
-  }
-  // Serial.println(frequency);
-  //delay(100);//feel free to remove this if you want
-  
-  //do other stuff here
 }
 
