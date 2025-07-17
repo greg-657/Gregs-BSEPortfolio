@@ -1,5 +1,5 @@
 # Music Game/Frequency Reader
-My project is a device that can read the frequency of a musical note, specifically from a trombone, and output what note it is, along with its frequency. It can also determine how many hertz a note played is from an intended note, average out these notes, and give you a score/ranking based on the averaging of how accurate each of the notes was (maybe every few samplings). I decided to do this project because it would help me with my trombone practicing and it combined 3 of my interests: video games, computer science, and playing trombone
+My project is a device that can read the frequency of a musical note, specifically from a trombone, and output what note it is, along with its frequency. It can also determine how many hertz a note played is from an intended note, average out these notes, and give you a score/ranking based on the averaging of how accurate each of the notes was (maybe every few samplings). I decided to do this project because I thought it was a perfect balance of too easy and too hard, it seemed fun and interesting to do, as well as figure out how to code it on my own, it would help me with my trombone practicing by adding a gamified aspect to it, and it combined 3 of my interests/hobbies: video games, computer science, and playing trombone.
 
 
 
@@ -30,13 +30,8 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DfssOINo9t8?si=iSMWN71nb382KMqz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
 
-Since the filming of my previous milestone video, I managed
+Since the filming of my previous milestone video, I have managed to successfully implement the frequency-note conversion system, which takes the frequency value that was acquired and determines what note that frequency is closest to, by use of a large number of "if" statements. Ironically, it was surprisingly easy to make the frequency-to-note converter, but I struggled much more with the frequency detector in my 1st milestone. There were a few challenges that I needed to overcome to get to this stage. I feel that the biggest one I had was that I couldn't get a fast enough sample rate based on the function "analogRead" alone, as the Arduino UNO was too slow for those purposes (I chose the UNO because the base project that I was using used the components of a UNO and a sound sensor). This meant I had to find some sort of sampling program that could take in inputs at a high rate. To complete my final milestone, I must integrate the screen to display notes and incorporate the scoring system and note accuracy system.
 
 # First Milestone
 
@@ -44,14 +39,7 @@ Since the filming of my previous milestone video, I managed
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A0bFmoxoMo8?si=LV5PQAj5vhVgiuPV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-This is my first milestone. To get a good jumping-off point for my project, I decided to make a frequency reader, as that didn't seem too complicated. Hardware-wise, my project at this stage only had a sound sensor to read an audio input, an Arduino UNO microcontroller board to interpret that input, jumper wires, and a breadboard. Currently, I can read the frequency of trombone notes. My plan for the whole project is to make it so that the hardware can read a frequency and associate it with a note. Some challenges I am facing as of the completion of my first milestone are making a frequency system not limited to the B-flat scale, and not being able to work with an actual trombone, as it is too cumbersome, so I have to use a synthesizer. Challenges I faced while doing the first milestone were being able to get a 
-
-
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- The technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What is your plan to complete your project
+This is my first milestone. To get a good jumping-off point for my project, I decided to make a frequency reader, as that didn't seem too complicated. Hardware-wise, my project at this stage only had a sound sensor to read an audio input, an Arduino UNO microcontroller board to interpret that input, jumper wires, and a breadboard. Currently, I can read the frequency of trombone notes. My plan for the whole project is to make it so that the hardware can read a frequency and associate it with a note. Some challenges I am facing as of the completion of my first milestone are making a frequency system not limited to the B-flat scale, and not being able to work with an actual trombone, as it is too cumbersome to bring with me, so I have to use a synthesizer, which produces notes that sometimes feel too artificial. Challenges I faced while doing the first milestone were being able to get a high enough sampling rate, and once I had that I had to figure out a way to perform Fast Fourier Transforms on those samples to get my desired result (a frequency).
 
 
 
@@ -61,14 +49,17 @@ For your first milestone, describe what your project is and how you plan to buil
 
 
 # The Sources I Used
-This project wouldn't be possible without the help of talented individuals, both in this class and on the internet. Here are the majority of the sources I used
+This project wouldn't be possible without the help of many talented individuals, both in this class and on the internet. Here are the majority of the sources I used
 
--[this instructables article](https://www.instructables.com/Arduino-Audio-Input/)
-note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) article, linked on the page
+-[this instructables article](https://www.instructables.com/Arduino-Audio-Input/), to get a fast enough sample rate that I could perform the FFTs
+Note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) article, linked on the previous article, to use those samples to get a frequency value.
 
 -[the Arduino Documentation](https://docs.arduino.cc/)
 
--[this was the project I decided to start from, and it provided a suitable base for me to work on my project and specialize it for the purposes I wanted](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)
+-[this](https://clydelettsome.com/blog/2019/12/18/my-weekend-project-audio-frequency-detector-using-an-arduino/)was the project I decided to start from, and it provided a suitable base for me to work on my project and specialize it for the purposes I wanted
+
+-I used [chatgpt](chatgpt.com) for doing some mass duplication of aspects of code I created but needed more of, for example, I had to change every instance of "serial" in the loop to "LCD" so it would print on the separate screen, and I used chatgpt to do this.
+
 
 
 
@@ -426,8 +417,10 @@ void loop(){
 | Jumper Wires | Connecting all the components together |
 
 
-
 | Breadboard | Having a space to connect all the wires |
+
+
+| USB B to C Cable | Uploading the code to the Arduino UNO and powering the board|
 
 ```
 # Other Resources/Examples
@@ -440,6 +433,6 @@ To watch the BSE tutorial on how to create a portfolio, click here.
 ```
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6ioimKLn2jI?si=vSGMq1GlVQYV36qd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-This video is showcasing my starter project. It is comprised of 3 sliders, with each of them controlling how much of a certain color there is. One controls red, one blue, and one green. Each one is connected to an LED of that corresponding color, and depending on how high you push the slider, the light will output at that strength. This can be used to create some color combinations. 
+This video showcases my starter project. It is comprised of 3 sliders, with each of them controlling how much of a certain color there is. One controls red, one blue, and one green. Each one is connected to an LED of that corresponding color, and depending on how high you push the slider, the light will output at that strength. This can be used to create some color combinations. 
   Sliding up both the red and blue creates magenta, the blue and green create cyan, and the green and red create yellow. Sliding all the sliders creates white. 
-  I chose this project because it seemed fun and didn't seem too easy or too challenging. I faced 2 main challenges while doing this project. First, I was using too much solder on each of the joints. However, by using some tips and advice from my instructors, I was able to start using an accurate amount of solder. The second challenge was when I tested it the first time, the light wouldn't work. After talking with my instructors, I learned it was because some of the joints weren't soldered, and they all needed to be soldered. These challenges helped me improve my soldering skills as I overcame them.
+  I chose this project because it seemed fun and didn't seem too easy or too challenging. I faced 2 main challenges while doing this project. First, I was using too much solder on each of the joints. However, by using some tips and advice from my instructors, I was able to start using an accurate amount of solder. The second challenge was when I tested it the first time, the light wouldn't work. After talking with my instructors, I learned it was because some of the joints weren't soldered, and they all needed to be soldered. These challenges helped me improve my soldering skills as I overcame them, and allowed me to learn the skills I needed
