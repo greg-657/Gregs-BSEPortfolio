@@ -65,7 +65,7 @@ Note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) art
 
 
 # Schematics 
-![](Untitleddesign.png)
+![](ddd.png)
 
 # Code
 
