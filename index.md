@@ -434,15 +434,6 @@ void loop(){
   lcd.print("off by ");
   lcd.print(score);
   lcd.print(" hz");
-  
-  results[count]=score;
-  count++;
-  if(count==6){
-    lcd.setCursor(0,1);
-    lcd.print("Your rank is ");
-    lcd.print(ranker(results)); 
-  }
-
   delay(1000);
 }
 ```
