@@ -1,4 +1,4 @@
-# Music Game/Frequency Reader
+s# Music Game/Frequency Reader
 My project is a device that can read the frequency of a musical note, specifically from a trombone, and output what note it is, along with its frequency. It can also determine how many hertz a note played is from an intended note, and tell you whether the note you played was higher or lower than the target note. However, it is slightly inaccurate because I rounded down from the decimal frequency values of the notes. I decided to do this project because I thought it was a perfect balance of too easy and too hard, it seemed fun and interesting to do, as well as figure out how to code it on my own, it would help me with my trombone practicing by adding a gamified aspect to it, and it combined 3 of my interests/hobbies: video games, computer science, and playing trombone.
 
 
@@ -71,9 +71,9 @@ Note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) art
 
 
 ```c++
-
 //generalized wave freq detection with 38.5kHz sampling rate and interrupts
-//by Amanda Ghassaei
+//original code by Amanda Ghassaei
+//code modified by Gregory Rusli
 //https://www.instructables.com/id/Arduino-Frequency-Detection/
 //Sept 2012
 
@@ -83,8 +83,6 @@ Note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) art
  * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
-*/
-/*
 */
 #include <LiquidCrystal_I2C.h>
 
@@ -140,7 +138,7 @@ void setup(){
 }
 String ranker(float scores[]){
   int length = sizeof(scores) / sizeof(scores[0]); 
-  int var=0;
+  float var=0;
   for(int i=0;i<length;i++){
     var+=scores[i];
   }
@@ -236,7 +234,6 @@ void checkClipping(){//manage clipping indicator LED
   }
 }
 
-int count=0;
 void loop(){
   frequency = 38462/float(period);
   float score=0;
@@ -246,327 +243,208 @@ void loop(){
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=98){
-      score=98-frequency;
-    }else if(frequency>=98){
-      score=frequency-98;
-    }
+    score=frequency-98;
   }else if((frequency >= 100) && (frequency <= 105)){    // Ab ~102 Hz ±4
     lcd.print("Ab ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=103){
-      score=103-frequency;
-    }else if(frequency>=103){
-      score=frequency-103;
-    }
-
+    score=frequency-103;
   }else if((frequency >= 106) && (frequency <= 113)){   // A ~109 Hz ±4
     lcd.print("A ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=110){
-      score=110-frequency;
-    }else if(frequency>=110){
-      score=frequency-110;
-    }
+    score=frequency-110;
   }else if((frequency >= 114) && (frequency <= 122)){   // Bb ~118 Hz ±4
     lcd.print("Bb ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=116){
-      score=116-frequency;
-    }else if(frequency>=116){
-      score=frequency-116;
-    }
+    score=frequency-116;
   }else if((frequency >= 126) && (frequency <= 134)){   // C ~133 Hz ±4
     lcd.print("C ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=130){
-      score=130-frequency;
-    }else if(frequency>=130){
-      score=frequency-130;
-    }
+    score=frequency-130;
   }else if((frequency >= 142) && (frequency <= 150)){   // D ~146 Hz ±4
     lcd.print("D ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=146){
-      score=146-frequency;
-    }else if(frequency>=146){
-      score=frequency-146;
-    }
+    score=frequency-146;
   }else if((frequency >= 151) && (frequency <= 159)){   // Eb ~157 Hz ±4
     lcd.print("Eb ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=155){
-      score=155-frequency;
-    }else if(frequency>=155){
-      score=frequency-155;
-    }
+    score=frequency-155;
   }else if((frequency >= 160) && (frequency <= 168)){   // E ~167 Hz ±4
     lcd.print("E ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=164){
-      score=164-frequency;
-    }else if(frequency>=164){
-      score=frequency-164;
-    }
+    score=frequency-164;
   }else if((frequency >= 170) && (frequency <= 178)){   // F ~174 Hz ±4
     lcd.print("F ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=174){
-      score=174-frequency;
-    }else if(frequency>=174){
-      score=frequency-174;
-    }
+    score=frequency-174;
   }else if((frequency >= 181) && (frequency <= 189)){   // F# ~185 Hz ±4
     lcd.print(" F# ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=185){
-      score=185-frequency;
-    }else if(frequency>=185){
-      score=frequency-185;
-    }
+    score=frequency-185;
   }else if((frequency >= 192) && (frequency <= 200)){   // G ~196 Hz ±4
     lcd.print("G ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=196){
-      score=196-frequency;
-    }else if(frequency>=196){
-      score=frequency-196;
-    }
+    score=frequency-196;
   }else if((frequency >= 203) && (frequency <= 211)){   // Ab ~207 Hz ±4
     lcd.print("Ab ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=207){
-      score=207-frequency;
-    }else if(frequency>=207){
-      score=frequency-207;
-    }
+    score=frequency-207;
   }else if((frequency >= 216) && (frequency <= 224)){   // A ~220 Hz ±4
     lcd.print("A ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=220){
-      score=220-frequency;
-    }else if(frequency>=220){
-      score=frequency-220;
-    }
+    score=frequency-220;
   }else if((frequency >= 229) && (frequency <= 237)){   // A (high) ~235 Hz ±4
     lcd.print("Bb (high) ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=233){
-      score=233-frequency;
-    }else if(frequency>=233){
-      score=frequency-233;
-    }
+    score=frequency-233;
   }else if((frequency >= 242) && (frequency <= 250)){   // Bb (high) ~236 Hz ±4 (overlaps slightly)
     lcd.print("B (high) ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=246){
-      score=246-frequency;
-    }else if(frequency>=246){
-      score=frequency-246;
-    }
+        score=frequency-246;
   }else if((frequency >= 257) && (frequency <= 265)){   // B ~245 Hz ±4
     lcd.print("C ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=261){
-      score=261-frequency;
-    }else if(frequency>=261){
-      score=frequency-261;
-    }
+    score=frequency-261;
   }else if((frequency >= 273) && (frequency <= 281)){   // B (high) ~255 Hz ±4
     lcd.print(" Db ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=277){
-      score=277-frequency;
-    }else if(frequency>=277){
-      score=frequency-277;
-    }
+    score=frequency-277;
   }else if((frequency >= 289) && (frequency <= 297)){   // C (high) ~266 Hz ±4
     lcd.print("D ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=293){
-      score=293-frequency;
-    }else if(frequency>=293){
-      score=frequency-293;
-    }
+    score=frequency-293;
   }else if((frequency >= 307) && (frequency <= 315)){   // C# (high) ~276 Hz ±4
     lcd.print("Eb ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=311){
-      score=311-frequency;
-    }else if(frequency>=311){
-      score=frequency-311;
-    }
+    score=frequency-311;
   }else if((frequency >= 325) && (frequency <= 333)){   // D (high) ~294 Hz ±4
     lcd.print("E ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=329){
-      score=329-frequency;
-    }else if(frequency>=329){
-      score=frequency-329;
-    }
+    score=frequency-329;
   }else if((frequency >= 345) && (frequency <= 353)){   // Eb (high) ~312 Hz ±4
     lcd.print("F ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=349){
-      score=349-frequency;
-    }else if(frequency>=349){
-      score=frequency-349;
-    }
+    score=frequency-349;
   }else if((frequency >= 365) && (frequency <= 373)){   // E (high) ~333 Hz ±4
     lcd.print("Gb ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=369){
-      score=369-frequency;
-    }else if(frequency>=369){
-      score=frequency-369;
-    }
+    score=frequency-369;
   }else if((frequency >= 388) && (frequency <= 396)){   // F (high) ~353 Hz ±4
     lcd.print("G ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=392){
-      score=392-frequency;
-    }else if(frequency>=392){
-      score=frequency-392;
-    }
+    score=frequency-392;
   }else if((frequency >= 411) && (frequency <= 419)){   // F# (high) ~369 Hz ±4
     lcd.print("Ab ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=415){
-      score=415-frequency;
-    }else if(frequency>415){
-      score=frequency-415;
-    }
+    score=frequency-415;
   }else if((frequency >= 436) && (frequency <= 444)){   // G (high) ~395 Hz ±4
     lcd.print("A ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=440){
-      score=440-frequency;
-    }else if(frequency>=440){
-      score=frequency-440;
-    }
+    score=frequency-440;
   }else if((frequency >= 462) && (frequency <= 470)){   // Ab (high) ~415 Hz ±4
     lcd.print("Bb ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=466){
-      score=466-frequency;
-    }else if(frequency>=466){
-      score=frequency-466;
-    }
+    score=frequency-466;
   }else if((frequency >= 489) && (frequency <= 497)){   // A (high 2) ~440 Hz ±4
     lcd.print("B ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=493){
-      score=493-frequency;
-    }else if(frequency>=493){
-      score=frequency-493;
-    }
+    score=frequency-493;
   }else if((frequency >= 519) && (frequency <= 527)){   // Bb (high 2) ~466 Hz ±4
     lcd.print("C ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=523){
-      score=523-frequency;
-    }else if(frequency>=523){
-      score=frequency-523;
-    }
+    score=frequency-523;
   }else if((frequency >= 550) && (frequency <= 558)){   // B (high 2) ~495 Hz ±4
     lcd.print("Db ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-
+    score=frequency-554;
   }else if((frequency >= 583) && (frequency <= 591)){   // C (high 2) ~525 Hz ±4
     lcd.print("D ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=586){
-      score=586-frequency;
-    }else if(frequency>=586){
-      score=frequency-586;
-    }
+    score=frequency-586;
   }else if((frequency >= 618) && (frequency <= 626)){   // C# (high 2) ~558 Hz ±4
     lcd.print("Eb ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    if(frequency<=622){
-      score=622-frequency;
-    }else if(frequency>=622){
-      score=frequency-622;
-    }
+    score=frequency-622;
   }else{
     lcd.print("out of range ");
     lcd.print(frequency);
     lcd.print(" Hz");
     lcd.setCursor(0,0);
-    score=6;
     }
   lcd.setCursor(0,1);
   lcd.print("off by ");
   lcd.print(score);
   lcd.print(" hz");
-  // results[count]=score;
-  // count++;
-  // if(count==6){
-  //   lcd.setCursor(0,1);
-  //   lcd.print("Your rank is ");
-  //   lcd.print(ranker(results));
-  // }
-  // delay(1000);
+  
+  results[count]=score;
+  count++;
+  if(count==6){
+    lcd.setCursor(0,1);
+    lcd.print("Your rank is ");
+    lcd.print(ranker(results)); 
+  }
+
+  delay(1000);
+}
 ```
 
 # Bill of Materials
