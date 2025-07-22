@@ -70,7 +70,7 @@ Note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) art
 ```c++
 //generalized wave freq detection with 38.5kHz sampling rate and interrupts
 //original code by Amanda Ghassaei
-//code modified by Gregory Rusli
+//code modified by Gregory Rusli (with very slight assistance from ChatGPT (emphasis on slight))
 //https://www.instructables.com/id/Arduino-Frequency-Detection/
 //Sept 2012
 
