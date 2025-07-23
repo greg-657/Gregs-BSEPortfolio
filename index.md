@@ -1,4 +1,4 @@
-s# Music Game/Frequency Reader
+s# Music Note Reader/Frequency Detector
 My project is a device that can read the frequency of a musical note, specifically from a trombone, and output what note it is, along with its frequency. It can also determine how many hertz a note played is from an intended note, and tell you whether the note you played was higher or lower than the target note. However, it is slightly inaccurate because I rounded down from the decimal frequency values of the notes. I decided to do this project because I thought it was a perfect balance of too easy and too hard, it seemed fun and interesting to do, as well as figure out how to code it on my own, it would help me with my trombone practicing by adding a gamified aspect to it, and it combined 3 of my interests/hobbies: video games, computer science, and playing trombone.
 
 
