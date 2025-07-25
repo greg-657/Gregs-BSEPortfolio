@@ -17,7 +17,7 @@ My project is a device that can read the frequency of a musical note, specifical
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CeSZ49dn1OU?si=ASHTxaa_8TMzjYIJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-Since my previous milestone, I have added a liquid crystal display and a system to check how many hertz a played note is off from a target note. For this project, I had many challenges along the way. for my first milestone, I had to figure out how to sample at a high frequency rate, as this was the hurdle preventing me from doing Fast Fourier Transforms (FFTs). This is because the transforms require lots of samples in order to calculate a proper frequency value. After I found code that could do that, frequency caluclation was much easier as the FFT model is built around a large amount of samples. The next challenge I had was when I used artificial intelligence to duplicate sections of code. The reason this became a problem is because there was some overlap between frequencies, as I had included some leeway to account for the microphone and poorly played notes. However, this overlap would not only lead to errors, but when I asked chatgpt to fix it by removing the overlap, certain notes' frequency range in the reader didn't incorporate the actual note (94-97 in the reader, actual frequency was 100. Just an example). I had to go through every single note range to make sure they actually included the note. After I fixed this, I had a small challenge in setting up the library as I couldn't find a functioning one. Topics I learned throughout this process included the how electrical components connected, the meaning of certain electrical parts (5v, GND,etc.), FFTs, and the difference between analog and digital outputs. In order to apply what I learn, I hope that I can refine what I have so far and learn how to do for loops as well as get better at understanding the concept of FFTs
+Since my previous milestone, I have added a liquid crystal display and a system to check how many hertz a played note is off from a target note. For this project, I had many challenges along the way. for my first milestone, I had to figure out how to sample at a high frequency rate, as this was the hurdle preventing me from doing Fast Fourier Transforms (FFTs). This is because the transforms require lots of samples in order to calculate a proper frequency value. After I found code that could do that, frequency caluclation was much easier as the FFT model is built around a large amount of samples. The next challenge I had was when I used artificial intelligence to duplicate sections of code. The reason this became a problem is because there was some overlap between frequencies, as I had included some leeway to account for the microphone and poorly played notes. However, this overlap would not only lead to errors, but when I asked chatgpt to fix it by removing the overlap, certain notes' frequency range in the reader didn't incorporate the actual note (94-97 in the reader, actual frequency was 100. Just an example). I had to go through every single note range to make sure they actually included the note. After I fixed this, I had a small challenge in setting up the library as I couldn't find a functioning one. Topics I learned throughout this process included the how electrical components connected, the meaning of certain electrical parts (5v, GND,etc.), FFTs, and the difference between analog and digital outputs. In order to apply what I learn, I hope that I can refine what I have so far and learn how to do for loops as well as get better at understanding the concept of FFTs.
 
 
 
@@ -70,7 +70,7 @@ Note: I also used [this](https://www.instructables.com/Arduino-Audio-Input/) art
 ```c++
 //generalized wave freq detection with 38.5kHz sampling rate and interrupts
 //original code by Amanda Ghassaei
-//code modified by Gregory Rusli (with very slight assistance from ChatGPT (emphasis on slight))
+//code modified by Gregory Rusli
 //https://www.instructables.com/id/Arduino-Frequency-Detection/
 //Sept 2012
 
@@ -436,35 +436,17 @@ void loop(){
 ```
 
 # Bill of Materials
-
+| **Item Name** | **Item Purpose** | **Cost** | **Link** |
 | Devmo KY-037 Sound Sensor | Taking in the sample frequency signal and sending it to the board via an analog signal| $4.66 for one | [Link](https://www.amazon.com/DEVMO-Microphone-Sensitivity-Detection-Compatible/dp/B07S4DTKYH) |
-
-
 | Arduino UNO | Interpreting the analog signal and running the frequency-detection code| $27.60 | [Link](https://store-usa.arduino.cc/products/arduino-uno-rev3) |
-
-
 | 16x2 LCD display with I²C interface | Displaying notes and frequencies | $7.00 | [Link](https://store-usa.arduino.cc/collections/displays/products/16x2-lcd-display-with-i-c-interface) |
-
-
 | Jumper Wires | Connecting all the components together |
-
-
 | Breadboard | Having a space to connect all the wires |
-
-
 | USB B to C Cable | Uploading the code to the Arduino UNO and powering the board|
 
-```
-# Other Resources/Examples
-One of the best parts about GitHub is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
-
-To watch the BSE tutorial on how to create a portfolio, click here.
-```
+# Starter Project
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6ioimKLn2jI?si=vSGMq1GlVQYV36qd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This video showcases my starter project. It is comprised of 3 sliders, with each of them controlling how much of a certain color there is. One controls red, one blue, and one green. Each one is connected to an LED of that corresponding color, and depending on how high you push the slider, the light will output at that strength. This can be used to create some color combinations. 
   Sliding up both the red and blue creates magenta, the blue and green create cyan, and the green and red create yellow. Sliding all the sliders creates white. 
-  I chose this project because it seemed fun and didn't seem too easy or too challenging. I faced 2 main challenges while doing this project. First, I was using too much solder on each of the joints. However, by using some tips and advice from my instructors, I was able to start using an accurate amount of solder. The second challenge was when I tested it the first time, the light wouldn't work. After talking with my instructors, I learned it was because some of the joints weren't soldered, and they all needed to be soldered. These challenges helped me improve my soldering skills as I overcame them, and allowed me to learn the skills I needed
+  I chose this project because it seemed fun and didn't seem too easy or too challenging. I faced 2 main challenges while doing this project. First, I was using too much solder on each of the joints. However, by using some tips and advice from my instructors, I was able to start using an accurate amount of solder. The second challenge was when I tested it the first time, the light wouldn't work. After talking with my instructors, I learned it was because some of the joints weren't soldered, and they all needed to be soldered. These challenges helped me improve my soldering skills as I overcame them, and allowed me to learn the skills I needed.
