@@ -437,6 +437,7 @@ void loop(){
 
 # Bill of Materials
 | **Item Name** | **Item Purpose** | **Cost** | **Link** |
+|:--:|:--:|:--:|:--:|
 | Devmo KY-037 Sound Sensor | Taking in the sample frequency signal and sending it to the board via an analog signal| $4.66 for one | [Link](https://www.amazon.com/DEVMO-Microphone-Sensitivity-Detection-Compatible/dp/B07S4DTKYH) |
 | Arduino UNO | Interpreting the analog signal and running the frequency-detection code| $27.60 | [Link](https://store-usa.arduino.cc/products/arduino-uno-rev3) |
 | 16x2 LCD display with I²C interface | Displaying notes and frequencies | $7.00 | [Link](https://store-usa.arduino.cc/collections/displays/products/16x2-lcd-display-with-i-c-interface) |
